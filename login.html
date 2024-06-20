@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>火影忍者</title>
+		<link rel="stylesheet" href="css/style.css" />
+        <style>
+       
+
+        #bgVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures video covers the entire background */
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for better text readability */
+        }
+    </style>
+	</head>
+	<body>
+    <video id="bgVideo" src="video/f3.mp4"   autoplay="autoplay" loop = "loop" preload="preload" muted = "muted"/>
+   
+       此浏览器不支持video标记
+    </video>
+		<div class="header">
+			<div class="headerf">
+				<div class="hl">
+					<h3>火影忍者</h3>
+					<ul>
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="">人物剧集</a>
+							<ul class="two">
+								<li>
+									<a href="rw.html">人物角色</a>
+								</li>
+								<li>
+									<a href="jj.html">剧集介绍</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="zb.html">周边</a>
+						</li>
+						<li>
+							<a href="contant.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hr">
+					<input typ"text" placeholder="请输入搜索内容" />
+					<a href="res.html">注册</a>
+					<a href="login.html">登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="login">
+			<div class="login-f">
+				<h3>欢迎登录</h3>
+				<div class="login-box">
+					<input type="text" placeholder="请输入账号" />
+					<input type="password" placeholder="请输入密码" />
+				</div>
+				<button type="button">登录</button>
+				<p>没有账号，<a href="res.html">点击注册</a></p>
+			</div>
+		</div>
+		<div class="footer">
+			<p>©Copyright 火影忍者</p>
+		</div>
+	</body>
+</html>

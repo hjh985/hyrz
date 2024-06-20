@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>火影忍者</title>
+		<link rel="stylesheet" href="css/style.css" />
+        <title>video标记插入视频示例</title>
+
+
+
+<script>
+function show() {
+    var demo = document.getElementById("zone");
+    var imgs = zone.getElementsByTagName("img");    //获取zone中的图片
+    var ei = document.getElementById("enlarge_img");
+    for(i=0; i<imgs.length; i++){
+        var ts = imgs[i];
+        ts.onmousemove = function(event){   //兼容IE和DOM事件
+            event = event || window.event;
+            ei.style.display = "block";
+			//设置大图的路径和显示大小
+            ei.innerHTML = '<img src="' + this.src+ '" style="width:200px;" />';
+            ei.style.top  = document.body.scrollTop + event.clientY + 10 + "px";
+            ei.style.left = document.body.scrollLeft + event.clientX + 10 + "px";
+        }
+        ts.onmouseout = function(){
+            ei.innerHTML = "";
+            ei.style.display = "none";
+        }
+        ts.onclick = function(){    
+            window.open( this.src );
+        }
+    }
+}
+</script>
+<style>
+       
+
+      #bgVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            object-fit: cover; /* Ensures video covers the entire background */
+            z-index: -1;
+        }
+#zone img{  /*小图属性*/
+
+	}
+#enlarge_img{
+	position:absolute;
+	width:140px;
+	display:none;  /*默认状态大图不显示*/
+	z-index:9;     /*大图位于上层*/
+	border:5px solid #f4f4f4;
+	}
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+    </style>
+	</head>
+	<body onload="show;">
+		<div class="header">
+			<div class="headerf">
+				<div class="hl">
+					<h3>火影忍者</h3>
+					<ul>
+					  <li class="active"> <a href="contant.html">联系我们</a> </li>
+				  </ul>
+					<ul>
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="">人物剧集</a>
+							<ul class="two">
+								<li>
+									<a href="rw.html">人物角色</a>
+								</li>
+								<li>
+									<a href="jj.html">剧集介绍</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="zb.html">周边</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hr">
+					<input typ"text" placeholder="请输入搜索内容" />
+					<a href="res.html">注册</a>
+					<a href="login.html">登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="banner">  <video id="bgVideo" src="video/f2.mp4"   autoplay="autoplay" loop = "loop" preload="preload" muted = "muted"/>
+   
+       此浏览器不支持video标记
+    </video></div>
+		<h3 color="white" class="page-title">联系我们</h3>
+		<div class="contact">
+			<div class="contact-box">
+				<div class="contact-box-card">
+					<form class="form">
+						<div class="group">
+							<input placeholder="‎" type="text" required>
+							<label for="name">姓名</label>
+						</div>
+						<div class="group">
+							<input placeholder="‎" type="email" id="email" name="email" required>
+							<label for="email">邮箱</label>
+						</div>
+						<div class="group">
+							<input placeholder="‎" type="phone" id="phone" name="phone" required>
+							<label for="phone">手机号</label>
+						</div>
+						<div class="group">
+							<textarea placeholder="‎" id="comment" name="comment" rows="5" required></textarea>
+							<label for="comment">留言内容</label>
+						</div>
+						<button type="submit">提交</button>
+					</form>
+				</div>
+			</div>
+		</div>
+      <div id="zone" >  <img src="img/r1.png" alt="" height="298">
+        <img src="img/r2.png" alt="" height="298">
+        <img src="img/r4.png" alt="" height="298">
+        </div>
+      
+           <div id="enlarge_img" class="ju">
+				</div>
+        <div id="footer" class="footer">
+		  <p>©Copyright 火影忍者</p>
+		</div>
+	</body>
+</html>

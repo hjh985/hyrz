@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>火影忍者</title>
+		<link rel="stylesheet" href="css/style.css" />
+        <script src="js/scripts.js"></script>
+	</head>
+	<body>
+    <script language="javascript">
+	window.alert("你好，欢迎浏览该网站");
+
+		function checkAll(boolValue ) { 
+		var allCheckBoxs=document.getElementsByName("isBuy") ;
+	   	for (var i=0;i<allCheckBoxs.length ;i++)  {
+		   if(allCheckBoxs[i].type=="checkbox")  //可能有重名的其他类型元素，如图片、控件等，所以要判断类型
+			allCheckBoxs[i].checked=boolValue ;  //检查是否选中用checked，而不是value
+	   }     
+	}
+	function change(){
+		var initmmAll=document.getElementsByName("mmall") ;
+		if(initmmAll[0].checked==true)
+	   		checkAll(true);
+	   	else
+	  		checkAll(false);
+	}
+	function show() {
+    var demo = document.getElementById("zone");
+    var imgs = zone.getElementsByTagName("img");    //获取zone中的图片
+    var ei = document.getElementById("enlarge_img");
+    for(i=0; i<imgs.length; i++){
+        var ts = imgs[i];
+        ts.onmousemove = function(event){   //兼容IE和DOM事件
+            event = event || window.event;
+            ei.style.display = "block";
+			//设置大图的路径和显示大小
+            ei.innerHTML = '<img src="' + this.src+ '" style="width:200px;" />';
+            ei.style.top  = document.body.scrollTop + event.clientY + 10 + "px";
+            ei.style.left = document.body.scrollLeft + event.clientX + 10 + "px";
+        }
+        ts.onmouseout = function(){
+            ei.innerHTML = "";
+            ei.style.display = "none";
+        }
+        ts.onclick = function(){    
+            window.open( this.src );
+        }
+    }
+}
+	</script>
+		<div class="header">
+			<div class="headerf">
+				<div class="hl">
+					<h3>火影忍者</h3>
+					<ul>
+					  <li>
+					    <a href="">人物剧</a></li>
+					  <li class="active"> <a href="index.html">首页</a> </li>
+					  <li><a href="">集</a>
+					    <ul class="two">
+					      <li>
+					        <a href="rw.html">人物角色</a>
+					        </li>
+					      <li>
+					        <a href="jj.html">剧集介绍</a>
+					        </li>
+					      </ul>
+				      </li>
+						<li>
+							<a href="zb.html">周边</a>
+						</li>
+						<li>
+							<a href="contant.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hr">
+					<input typ"text" placeholder="请输入搜索内容" />
+					<a href="res.html">注册</a>
+					<a href="login.html">登录</a>
+				</div>
+			</div>
+		</div>
+
+<div class="banner">
+			<img src="img/b6.png" alt="">
+		</div>
+		<div class="jd">
+			<div id="zone" class="home-about-left">
+				<ul>
+					<li>
+						<h4>火影忍者</h4>
+						<p>将原本隐藏在黑暗中，做最密不可宣和隐讳残酷的事情的忍者，描绘成了太阳下最值得骄傲的职业,每一位年轻的忍者都在开拓着属于自己的忍道。</p>
+					</li>
+					<li>
+						<img src="img/y4.jpg" alt="">
+					</li>
+					<li>
+						<img src="img/y1.jpg" alt="">
+					</li>
+					<li>
+						<img src="img/y3.jpg" alt="">
+					</li>
+				</ul>
+			</div>
+			<div id="enlarge_img" class="home-about-right">
+				<video src="video/f4.mp4" controls></video>
+			</div>
+		</div>
+		<div class="title">
+			<h3>火影忍者</h3>
+			<p>剧情简介</p>
+		</div>
+		<div class="img-text">
+			<div class="img-text-list">
+				<div class="itl-img">
+					<img src="img/d1.png">
+				</div>
+				<div class="itl-text">
+					<p>漩涡鸣人是第四代火影波风水门和第二代九尾人柱力漩涡玖辛奈之子，六道仙人次子阿修罗转世。出生时父母为保护村子，将强大的尾兽——九尾封印于鸣人体内后牺牲。在旗木卡卡西老师的带领下，与佐助、小樱一起踏上了修行之路。在打败袭击木叶的晓组织首领佩恩后，鸣人终于摆脱村民的嘲讽，成为人人称赞的木叶英雄，并在第四次忍界大战中发挥着至关重要的作用。最后当上了第七代火影，与日向雏田结为夫妻并有一儿一女。</p>
+				</div>
+			</div>
+			<div class="img-text-list">
+				<div class="itl-text">
+					<p>佐助，年幼时因目睹宇智波一族被哥哥宇智波鼬所歼灭，从而走上复仇之路。在终结之谷与漩涡鸣人展开激战，将鸣人打败后叛离木叶前去追随大蛇丸。三年后，佐助将大蛇丸吸收，并成功赢得了兄弟之战，但事后从带土口中得知了鼬的灭族真相，于是决定摧毁木叶。
+一条手臂。最终佐助被鸣人感化，认同了鸣人的道路，终于回归木叶，并重新成为木叶的一员。此后佐助独自一人环游忍界，暗中默默地守护木叶。</p>
+				</div>
+				<div class="itl-img">
+					<img src="img/d3.png">
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>©Copyright 火影忍者</p>
+		</div>
+	</body>
+</html>

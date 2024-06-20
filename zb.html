@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>火影忍者</title>
+		<link rel="stylesheet" href="css/style.css" />
+        <script src="js/scripts.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="headerf">
+				<div class="hl">
+					<h3>火影忍者</h3>
+					<ul>
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="">人物剧集</a>
+							<ul class="two">
+								<li>
+									<a href="rw.html">人物角色</a>
+								</li>
+								<li>
+									<a href="jj.html">剧集介绍</a>
+								</li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="zb.html">周边</a>
+						</li>
+						<li>
+							<a href="contant.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hr">
+					<input typ"text" placeholder="请输入搜索内容" />
+					<a href="res.html">注册</a>
+					<a href="login.html">登录</a>
+				</div>
+			</div>
+		</div>
+	
+        <script language="javascript" type="text/javascript">
+            //<![CDATA[
+            var _t1 = 0; 	//打开页面时等待图片载入的时间，单位为秒，可以设置为0
+            var _t2 = 3; 	//图片轮转的间隔时间
+            var _tnum = 3; //焦点图个数
+            var _tn = 1;	//当前焦点
+            var _tl =null;
+            _tt1 = setTimeout('change_img()',_t1*1000);
+
+            function change_img(){
+                setFocus(_tn);
+                _tt1 = setTimeout('change_img()',_t2*1000);
+            }
+            function setFocus(i){
+                if(i>_tnum){_tn=1;i=1;}
+                _tl?document.getElementById('focusPic'+_tl).style.display='none':'';
+                document.getElementById('focusPic'+i).style.display='block';
+                _tl=i;
+                _tn++;
+            }
+            //]]>
+        </script>
+        <!--焦点图1开始 标题13字 说明30个字-->
+        <div class="banner" id="focusPic1">
+            <a href="#" >
+                <img src="img/b1.png" alt="从前" /></a>
+            <h1 ><a href="#" >从前</a></h1>
+            <div class="index_page"><span onClick="javascript:setFocus(2);">点击切换焦点图→</span>
+                <strong>1</strong>
+                <a href="javascript:setFocus(2);">2</a>
+                <a href="javascript:setFocus(3);">3</a>
+            </div>
+        </div>
+        <!--焦点图1结束-->
+        <!--焦点图2开始  标题13字 说明30个字-->
+        <div class="banner" id="focusPic2" style="display:none;">
+            <a href="#">
+                <img src="img/b2.png" alt="现在" /></a>
+            <h1><a href="#" >现在</a></h1>
+            <div class="index_page"><span onClick="javascript:setFocus(3);">点击切换焦点图→</span>
+                <a href="javascript:setFocus(1);">1</a>
+                <strong>2</strong>
+                <a href="javascript:setFocus(3);">3</a>
+            </div>
+        </div>
+        <!--焦点图2结束-->
+        <!--焦点图3开始  标题13字 说明30个字-->
+        <div class="banner" id="focusPic3" style="display:none;">
+            <a href="#" >
+                <img src="img/b3.png" alt="未来" />
+            </a>
+            <h1><a href="#" >未来</a></h1>
+            <div class="index_page"><span onClick="javascript:setFocus(4);">点击切换焦点图→</span>
+                <a href="javascript:setFocus(1);">1</a>
+                <a href="javascript:setFocus(2);">2</a>
+                <strong>3</strong>
+            </div>
+        </div>
+        <!--焦点图3结束-->
+   
+		<h3 class="page-title">周边</h3>
+		<div class="list">
+			<ul>
+				<li>
+					<a href="">
+						<img src="img/c1.png" alt="">
+						<p>北京·经典动漫二次元舞蹈音乐会《火影忍者》</p>
+						<p><b>￥79</b><span>1000人购买</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/c2.png" alt="">
+						<p>深圳·Live Spectacle 《NARUTO-火影忍者-》～晓之音～</p>
+						<p><b>￥269</b><span>2000人购买</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/c3.png" alt="">
+						<p>上海·漫游火影忍者同好嘉年华</p>
+						<p><b>￥119</b><span>200人购买</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/c4.png" alt="">
+						<p>上海·火影忍者世界主题乐园</p>
+						<p><b>￥69</b><span>7000人购买</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/c5.png" alt="">
+						<p>南京·火影忍者一乐拉面</p>
+						<p><b>￥96</b><span>20人购买</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/c6.png" alt="">
+						<p>信阳火影忍者主题动漫展</p>
+						<p><b>￥53</b><span>600人购买</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/c7.png" alt="">
+						<p>石家庄·火影忍者only</p>
+						<p><b>￥169</b><span>400人购买</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/c8.png" alt="">
+						<p>成都·NARUTO火影忍者动画展</p>
+						<p><b>￥234</b><span>75人购买</span></p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<p>©Copyright 火影忍者</p>
+		</div>
+	</body>
+</html>
